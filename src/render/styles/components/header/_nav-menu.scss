@@ -1,0 +1,23 @@
+@import 'abstracts/variables';
+.__menu-list li {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 15px 0px;
+    border-bottom: 1px solid $cl-light-gray;
+}
+
+.__menu-list a {
+    color: $cl-gray;
+}
+
+.fa-chevron-circle-down {
+    &:before {
+        content: "\f13a";
+    }
+}
+
+.icon-down {
+    float: right;
+    margin-right: 20px;
+    font-size: 17px;
+}
