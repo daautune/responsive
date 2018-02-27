@@ -1,0 +1,26 @@
+@import 'abstracts/variables';
+@import 'nav';
+@media only screen and (min-width: 992px) {
+    .btn-menu {
+        display: none;
+    }
+    .__contact {
+        display: block;
+        background: $cl-white;
+    }
+    .__header {
+        background: $cl-white;
+    }
+    .__contact-list li a {
+        color: $cl-gray;
+    }
+    .nav-menu {
+        display: flex;
+    }
+    .nav-collapse .navbar-collapse.collapse {
+        display: block !important;
+    }
+    .menu-list {
+        display: none;
+    }
+}

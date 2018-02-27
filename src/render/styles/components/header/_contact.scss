@@ -1,0 +1,31 @@
+@import 'abstracts/variables';
+.__contact {
+    background: $cl-contact-nav;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $cl-light-gray;
+}
+
+.contact-list {
+    margin-top: 20px;
+}
+
+.__contact-list li {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 30px;
+    margin-top: 10px;
+}
+
+.__contact-list li a {
+    color: $cl-white;
+}
+
+.contact-list li:hover a {
+    text-decoration: none;
+}
+
+.__contact-icon {
+    float: left;
+    margin-right: 10px;
+}

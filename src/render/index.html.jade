@@ -1,0 +1,84 @@
+extends ./../layouts/default.jade
+body
+  block content
+    nav.__contact
+       ul.__contact-list
+          li: a(href="#") thaoptm2206@gmail.com
+                img.__contact-icon(src="./../icons/email-icon.png")
+          li: a(href="#") +84 902 543 996
+                img.__contact-icon(src="./../icons/phone-icon.png")
+          li: a(href="#") Mai Thảo
+                img.__contact-icon(src="./../icons/skype-icon.png")
+    .__header
+      img.__logo(src="./../images/logo.png")
+      img.__title(src="./../images/adelfox.png")
+      nav.navbar.navbar-default.nav-navbar
+          .container-fluid
+            .navbar-header.nav
+              button.navbar-toggle.collapsed.btn-menu(type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+                span.sr-only
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            .nav-collapse.navbar-collapse.collapse#navbar
+              ul.nav.navbar-nav.nav-menu
+                - var items = [{href:"#", name: 'Home'}, {href:"#", name: 'Page'}, {href:"#", name: 'Portfollio'}, {href:"#", name: 'Shop'}, {href:"#", name: 'Blog'}, {href:"#", name: 'Shortodes'}]
+                  each item in items
+                   li: a(href="#{item.href}")=item.name
+                     i.fa.fa-chevron-circle-down.icon-down(aria-hidden="true")
+                li.dropdown
+                  a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Features 
+                    i.fa.fa-chevron-circle-down.icon-down(aria-hidden="true")
+                  ul.dropdown-menu
+                    li.dropdown-header Layer Slider Banner
+                     - var items = [{href:"#", name: 'Sub Menu Level 2'}, {href:"#", name: 'Sub Menu Level 2'}, {href:"#", name: "Sub Menu Level 2"}, {href:"#", name: 'Sub Menu Level 2'}]
+                        each item in items
+                           li.dropdown-item: a(href="#{item.href}")=item.name
+                    li.divider(role="separator")
+                    li.dropdown-header Featured 2
+                     - var items = [{href:"#", name: 'Sub Menu Level 2'}, {href:"#", name: 'Sub Menu Level 2'}, {href:"#", name: 'Sub Menu Level 2'}, {href:"#", name: 'Sub Menu Level 2'}]
+                        each item in items
+                            li.dropdown-item: a(href="#{item.href}")=item.name
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(type='text/javascript', src='./bootstrap/4.0.0-beta/bootstrap.min.js')
+    .container.__slide
+      #myCarousel.carousel.slide(data-ride="carousel")
+        <!-- Indicators -->
+        ol.carousel-indicators
+          li.active(data-target="#myCarousel" data-slide-to="0")
+          li(data-target="#myCarousel" data-slide-to="1")
+          li(data-target="#myCarousel" data-slide-to="2")
+        <!-- Wrapper for slides -->
+        .carousel-inner
+          .item.active
+            img(src="https://www.w3schools.com/bootstrap/la.jpg" alt="Los Angeles" style="width:100%;")
+            div.slide
+              h3 AMAZING THEME
+              h2 ADELEFOX IS THE BEST
+              h4 Uniques and Model Design
+          .item
+            img(src="https://www.w3schools.com/bootstrap/chicago.jpg" alt="Chicago" style="width:100%;")
+          .item
+            img(src="https://www.w3schools.com/bootstrap/ny.jpg" alt="New york" style="width:100%;")
+            
+        <!-- Left and right controls -->
+        a.left.carousel-control(href="#myCarousel" data-slide="prev")
+          span.glyphicon.glyphicon-chevron-left
+          span.sr-only
+        a.right.carousel-control(href="#myCarousel" data-slide="next")
+          span.glyphicon.glyphicon-chevron-right
+          span.sr-only
+    .jumbotron.text-center
+      h2 You will save time and Effort!
+      p Nullam interdum vehicula urna ut laoreet. Nulla eleifend suscipit fringilla. Morbi mollis ut lorem eget viverra. Phasellus et augue placerat, imperdiet nibh quis, fermentum velit. Suspendisse blandit ligula a ipsum posuere cursus.
+    .container
+      .row
+        .col-sm-4
+          h5 Column 1
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+        .col-sm-4
+          h5 Column 1
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+        .col-sm-4
+          h5 Column 1
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit..
